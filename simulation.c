@@ -47,6 +47,13 @@ struct dataStruct* data;
 /* Where all the magic happens */
 int main(int argc, char* argv[]){
 
+
+    /*TODO A level solution: Have initial process create an extra pipe, 
+     * have every child process close the fd's to that pipe,
+     * have the last process leave them open connecting first process to last.
+     */
+
+
     ssize_t bytes_read;     // Used to store the number of bytes read from read()
     char str[MAX];          // A String to hold user input
     int fd[2];              // Array to hold the initial fd's of a given process.
